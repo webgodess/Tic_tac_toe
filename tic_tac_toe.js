@@ -4,8 +4,6 @@ const table = document.createElement("table");
 const tBody = document.createElement("tbody");
 const choices = document.getElementById("choice");
 const cells = document.getElementsByTagName("td");
-const rows = document.getElementsByTagName("tr");
-const btn = document.querySelectorAll("button");
 const btnO = document.getElementById("o-btn");
 const btnX = document.getElementById("x-btn");
 const btnReset = document.getElementById("reset");
@@ -29,10 +27,6 @@ const winningCombinations = [
   ["0,2", "1,2", "2,2"],
   ["0,0", "1,1", "2,2"],
   ["0,2", "1,1", "2,0"],
-];
-
-//state of board
-let board = [
 ];
 
 
@@ -121,27 +115,6 @@ const checkForWinner = () => {
 
   return null;
 };
-
-// function to insert the state of the table into the board variable
- 
-  const stateOfBoard = () => {
-    board = []; // Clear the board array before populating it
-  
-    for (let row of rows) {
-      const rowData = [];
-
-      //check the tds of the row
-      const rowCells = row.querySelectorAll("td");
-      
-      for (let cell of rowCells) {
-        rowData.push(cell.textContent);
-      }
-      
-      board.push(rowData);
-    }
-  //  console.log(board);
-  };
-  
   
 
 // Function for the computer's move
@@ -241,17 +214,7 @@ const possibleMoves = () => {
 return possibilities;
 };
 
-//minimax function
-const minimax = (boardState,currentPlayer) =>{
-  let bestScore = -Infinity;
-if(checkForWinner() === 'user'){
-  score=-1
-} else if(checkForWinner() === 'computer'){
-  score=1
-}else if(checkForWinner() === 'draw'){
-  score=0
-}
-}
+
 
 
 // Event listeners
