@@ -1,4 +1,4 @@
-# tic_tac_toe
+
 # Tic Tac Toe Game
 
 This project is a simple implementation of the Tic Tac Toe game using HTML, CSS, and JavaScript. It allows two players to take turns marking X or O on a 3x3 grid until a winner is determined or the game ends in a draw.
