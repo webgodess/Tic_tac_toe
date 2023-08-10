@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root {
+  --primary-color: #E5BB4B;
+  --secondary-color: #498eaf;
+  --tercary-color: #68636B;
+}
+
+
+body{
+  background-color:var(--secondary-color);
+  width:100%;
+  margin:0;
+  font-family: 'Permanent Marker', cursive;
+}
+nav{
+      display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  background-color:var(--primary-color);
+  width:100%;
+  height:60px;
+  font-size: large;
+}
+
+button{
+      background-color: var(--secondary-color);
+    border: none;
+    padding: 1em;
+  border-radius:15%;
+  font-family: 'Permanent Marker', cursive;
+ 
+}
+
+button:active {
+  transform: translateY(4px);
+}
+
+table{
+ 
+ 
+    height: 75vh;
+  width:48%;
+    margin: 23px auto;
+   table-layout: fixed;
+}
+
+@media (max-width: 769px) {
+ table{
+    width:90%;
+  }
+}
+
+td:hover {background-color: coral;}
+
+td {
+  text-align: center;
+   background-color:var(--primary-color);
+  min-width:33%;
+  font-size: xx-large;
+  color:var(--secondary-color);
+  border:1px solid var(--tercary-color);
+}
+ /* to avoid td expanding when content inserted */
+td:after {
+  content: "\00A0";
+  
+}
+
+
+/* remove border for edges */
+td:nth-child(1), td:nth-child(2), td:nth-child(3) {
+	border-top: none;
+}
+
+td:nth-child(1), td:nth-child(4), td:nth-child(7) {
+	border-left: none;
+}
+
+td:nth-child(3), td:nth-child(6), td:nth-child(9) {
+	border-right: none;
+}
+
+td:nth-child(7), td:nth-child(8), td:nth-child(9) {
+	border-bottom: none;
+}
+
+.fa-circle,.fa-times{
+  color:var(--secondary-color);
+}
+
+#scoreBoard{
+  display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+@media (max-width: 769px) {
+  #scoreBoard{
+    display:none;
+  } 
+}
+span{
+  margin:0 8px;
+}
+#o-btn{
+  margin-right:2px
+}
+
+#container{
+      height: 90vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+#info-panel{
+  text-align: center;
+}
